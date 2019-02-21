@@ -9,6 +9,10 @@ use std::char::from_u32;
 use super::{Literal, TypeLang, Predicate, Subject, Object, Triple};
 
 #[pub]
+quiet_line -> Option<Triple>
+    = #quiet<triple_line>
+
+#[pub]
 // added
 triple_line -> Option<Triple>
 	= t: triple { Some(t) }
